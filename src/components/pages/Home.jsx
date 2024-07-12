@@ -29,7 +29,7 @@ const useUrl = (category) => {
     return { url, error, loading, update };
 };
 
-function Home({ category }) {
+function Home({ category, setItem }) {
 
     const { url, error, loading, update } = useUrl(category);
 
@@ -41,7 +41,12 @@ function Home({ category }) {
             <main>
                 {url.map((element) => {
                     return (
-                        <Item image={element.image} title={element.title} />
+                        <Item 
+                            image={element.image} 
+                            title={element.title} 
+                            setItem={setItem} 
+                            cart={false}
+                        />
                     );
                 })}
             </main>

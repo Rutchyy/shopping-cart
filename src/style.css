@@ -45,6 +45,7 @@ nav input {
   border-radius: 50px;
 }
 
+/* OTHER */
 section {
   margin: 10px;
   border-radius: 20px;
@@ -62,7 +63,7 @@ main {
   grid-template-columns: repeat(2, 1fr);
 }
 
-.add {
+button {
   width: 100%;
   padding: 5px 13px;
   border-radius: 20px;
@@ -70,4 +71,10 @@ main {
   background: hsl(210, 70%, 33%);
   color: white;
   font-size: 0.8rem;
+}
+
+#buy {
+  background-color: red;
+  width: calc(100% - 20px);
+  margin: 10px;
 }

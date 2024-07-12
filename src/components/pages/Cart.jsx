@@ -1,6 +1,24 @@
-function Cart() {
+import Item from "../Item";
+
+function Cart({ list, buyItems }) {
+    function buy() {
+        buyItems([]);
+    }
+
     return (
-        <h1>This is the cart page.</h1>
+        <>
+            <h4>Your cart:</h4>
+            {list.map((element) => {
+                    return (
+                        <Item 
+                            image={element.image} 
+                            title={element.title}
+                            cart={true}
+                        />
+                    );
+                })}
+            <button onClick={buy}>Buy items</button>
+        </>
     );
 }
 
